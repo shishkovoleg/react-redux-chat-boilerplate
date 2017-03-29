@@ -5,7 +5,8 @@ let styles = {
 	wrapper: {
 		backgroundColor: '#ffffff',
 		height: 90,
-		paddingTop: 12
+		paddingTop: 12,
+		borderBottom: '1px solid #dddddd'
 	},
 	contactName: {
 		fontWeight: 600,
@@ -25,7 +26,7 @@ let styles = {
 class ChatHeader extends Component {
 	render() {
 		return (
-			<div style={styles.wrapper} className="z-depth-1 col-md-12">
+			<Col md={12} style={styles.wrapper}>
 				<Col md={2}>
 					<img className="rounded-circle z-depth-2" src="https://robohash.org/TK9.png?set=set3&amp;size=84x84" alt="" />
 				</Col>
@@ -37,7 +38,7 @@ class ChatHeader extends Component {
 						Last seen 1 hour ago
 					</Col>
 				</Col>
-			</div>
+			</Col>
 		);
 	}
 }
