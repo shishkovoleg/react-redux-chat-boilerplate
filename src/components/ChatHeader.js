@@ -6,7 +6,7 @@ let styles = {
 		backgroundColor: '#ffffff',
 		height: 90,
 		paddingTop: 12,
-		borderBottom: '1px solid #dddddd'
+		borderBottom: '1px solid #dddddd',
 	},
 	contactName: {
 		fontWeight: 600,
