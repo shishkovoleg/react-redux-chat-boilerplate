@@ -6,7 +6,7 @@ import ContactListItem from './ContactListItem'
 class ContactList extends Component {
 	render() {
 		return (
-			<Col xs={12} md={4}>
+			<Col xs={12} md={4} className="list-group z-depth-1">
 				<ContactListItem/>
 				<ContactListItem/>
 				<ContactListItem/>
