@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
+import Message from './Message';
+
+let styles = {
+	wrapper: {
+		backgroundColor: '#ffffff',
+		minHeight: 800
+	}
+};
 
 class MessageList extends Component {
 	render() {
 		return (
-			<div>Message List</div>
+			<div style={styles.wrapper} className="col-md-12">
+				<Message/>
+				<Message/>
+				<Message/>
+			</div>
 		);
 	}
 }
