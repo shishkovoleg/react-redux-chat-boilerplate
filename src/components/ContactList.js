@@ -5,14 +5,14 @@ import ContactListItem from './ContactListItem'
 
 let styles = {
 	wrapper: {
-		padding: 10
+		padding: 0
 	},
 };
 
 class ContactList extends Component {
 	render() {
 		return (
-			<Col xs={12} md={4} className="list-group z-depth-1" style={styles.wrapper}>
+			<Col md={12} className="list-group z-depth-1" style={styles.wrapper}>
 				<ContactListItem/>
 				<ContactListItem/>
 				<ContactListItem/>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col, Row} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import ChatMessageInput from './ChatMessageInput'
 import MessageList from './MessageList'
 import ChatHeader from './ChatHeader'
