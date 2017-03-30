@@ -38,20 +38,20 @@ let styles = {
 class ContactListItem extends Component {
 	render() {
 		return (
-			<Row className="list-group-item" style={styles.wrapper}>
+			<Row className="list-group-item" style={styles.wrapper} key={this.props.id}>
 				<div className="media-left" style={styles.media}>
 					<img className="rounded-circle z-depth-2"
-						 src="https://robohash.org/TK9.png?set=set3&amp;size=64x64"
+						 src={this.props.photo}
 						 style={styles.logo}
 						 alt="" />
 				</div>
 				<div className="media-body" style={styles.media}>
 					<Col md={9} style={styles.text}>
-						<h4 style={styles.h4}>Contact name</h4>
-						<span>Part of last message...</span>
+						<h4 style={styles.h4}>{this.props.name}</h4>
+						<span>{this.props.lastMessage}</span>
 					</Col>
 					<Col md={3}>
-						<div style={styles.lastTime}>14:35</div>
+						<div style={styles.lastTime}>{this.props.lastTime}</div>
 					</Col>
 				</div>
 			</Row>

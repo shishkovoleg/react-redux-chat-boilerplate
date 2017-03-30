@@ -15,7 +15,7 @@ class ContactListWrapper extends Component {
 		return (
 			<Col md={4} style={styles.wrapper}>
 				<ContactListFilter/>
-				<ContactList/>
+				<ContactList contactList={this.props.contactList}/>
 			</Col>
 		);
 	}
