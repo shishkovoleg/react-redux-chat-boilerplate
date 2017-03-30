@@ -4,7 +4,10 @@ import Message from './Message';
 let styles = {
 	wrapper: {
 		backgroundColor: '#ffffff',
-		minHeight: 700
+		minHeight: 700,
+		borderLeft: '1px solid #dddddd',
+		borderRight: '1px solid #dddddd',
+		borderBottom: '1px solid #dddddd',
 	}
 };
 

@@ -6,12 +6,15 @@ let styles = {
 		backgroundColor: '#ffffff',
 		paddingTop: 15,
 		paddingBottom: 15,
-		borderTop: '1px solid #dddddd'
+		borderLeft: '1px solid #dddddd',
+		borderRight: '1px solid #dddddd',
+		borderBottom: '1px solid #dddddd',
 	},
 	input: {
 		width: '90%',
 		marginLeft: 30,
-		height: 45
+		height: 45,
+		borderRadius: 0
 	}
 };
 

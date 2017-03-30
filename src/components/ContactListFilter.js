@@ -9,7 +9,6 @@ let styles = {
 		marginTop: 10,
 		borderTop: '1px solid #dddddd',
 		borderLeft: '1px solid #dddddd',
-		borderRight: '1px solid #dddddd'
 	},
 	input: {
 		height: 40,

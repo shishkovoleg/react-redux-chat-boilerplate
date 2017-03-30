@@ -15,7 +15,8 @@ let styles = {
 		paddingRight: 12,
 		cursor: 'pointer',
 		marginLeft: 0,
-		marginRight: 0
+		marginRight: 0,
+		borderRight: 0
 	},
 	lastTime: {
 		marginTop: 12,

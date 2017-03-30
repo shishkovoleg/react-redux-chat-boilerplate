@@ -6,8 +6,8 @@ import ChatHeader from './ChatHeader'
 
 let styles = {
 	marginTop: 10,
-	paddingLeft: 6,
-	paddingRight: 6
+	paddingLeft: 0,
+	paddingRight: 0
 };
 
 class Chat extends Component {
