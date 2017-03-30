@@ -9,8 +9,8 @@ let styles = {
 		fontSize: 16
 	},
 	wrapper: {
-		paddingTop: 0,
-		paddingBottom: 0,
+		paddingTop: 2,
+		paddingBottom: 8,
 		paddingLeft: 12,
 		paddingRight: 12,
 		cursor: 'pointer',
@@ -21,16 +21,21 @@ let styles = {
 	lastTime: {
 		marginTop: 12,
 		color: '#888888',
-		marginLeft: 14
+		marginLeft: 30,
+		fontSize: 12
 	},
 	media: {
-		paddingLeft: 12,
-		paddingRight: 12
+		paddingLeft: 12
 	},
-	logo: {
-		marginTop: 6
+	photo: {
+		marginTop: 6,
+		width: 56,
+		height: 56
 	},
 	text: {
+		padding: 0
+	},
+	lastTimeWrapper: {
 		padding: 0
 	}
 };
@@ -40,17 +45,17 @@ class ContactListItem extends Component {
 		return (
 			<Row className="list-group-item" style={styles.wrapper} key={this.props.id}>
 				<div className="media-left" style={styles.media}>
-					<img className="rounded-circle z-depth-2"
+					<img className="img-circle"
 						 src={this.props.photo}
-						 style={styles.logo}
+						 style={styles.photo}
 						 alt="" />
 				</div>
 				<div className="media-body" style={styles.media}>
-					<Col md={9} style={styles.text}>
+					<Col md={8} style={styles.text}>
 						<h4 style={styles.h4}>{this.props.name}</h4>
 						<span>{this.props.lastMessage}</span>
 					</Col>
-					<Col md={3}>
+					<Col md={4} style={styles.lastTimeWrapper}>
 						<div style={styles.lastTime}>{this.props.lastTime}</div>
 					</Col>
 				</div>

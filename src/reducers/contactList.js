@@ -1,25 +1,16 @@
+import faker from 'faker';
+import _ from 'lodash';
+import moment from 'moment';
+
 export default function() {
-	return [
-		{
-			id: 1,
-			name: 'Contact name 1',
-			lastMessage: 'Last message...',
-			photo: 'https://robohash.org/TK9.png?set=set3&amp;size=64x64',
-			lastTime: '14:35'
-		},
-		{
-			id: 2,
-			name: 'Contact name 2',
-			lastMessage: 'Last message...',
-			photo: 'https://robohash.org/TK8.png?set=set3&amp;size=64x64',
-			lastTime: '11:00'
-		},
-		{
-			id: 3,
-			name: 'Contact name 3',
-			lastMessage: 'Last message...',
-			photo: 'https://robohash.org/TK7.png?set=set3&amp;size=64x64',
-			lastTime: '12:54'
-		}
-	];
+
+	return _.times(20, function(n) {
+		return {
+			id: n,
+			name: faker.name.findName(),
+			photo: faker.internet.avatar(),
+			lastTime: moment().format("ddd, hA"),
+			lastMessage: _.truncate(faker.lorem.sentence(), {'length': 25})
+		};
+	});
 }
