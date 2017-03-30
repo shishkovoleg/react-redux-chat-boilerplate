@@ -26,6 +26,12 @@ let styles = {
 	media: {
 		paddingLeft: 12,
 		paddingRight: 12
+	},
+	logo: {
+		marginTop: 6
+	},
+	text: {
+		padding: 0
 	}
 };
 
@@ -34,10 +40,13 @@ class ContactListItem extends Component {
 		return (
 			<Row className="list-group-item" style={styles.wrapper}>
 				<div className="media-left" style={styles.media}>
-					<img className="rounded-circle z-depth-2" src="https://robohash.org/TK9.png?set=set3&amp;size=64x64" alt="" />
+					<img className="rounded-circle z-depth-2"
+						 src="https://robohash.org/TK9.png?set=set3&amp;size=64x64"
+						 style={styles.logo}
+						 alt="" />
 				</div>
 				<div className="media-body" style={styles.media}>
-					<Col md={9}>
+					<Col md={9} style={styles.text}>
 						<h4 style={styles.h4}>Contact name</h4>
 						<span>Part of last message...</span>
 					</Col>
