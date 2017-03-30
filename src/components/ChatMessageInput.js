@@ -4,7 +4,9 @@ import {Col, FormControl} from 'react-bootstrap';
 let styles = {
 	wrapper: {
 		backgroundColor: '#ffffff',
-		paddingBottom: 15
+		paddingTop: 15,
+		paddingBottom: 15,
+		borderTop: '1px solid #dddddd'
 	},
 	input: {
 		width: '90%',
