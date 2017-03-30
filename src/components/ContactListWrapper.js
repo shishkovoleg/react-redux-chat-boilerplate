@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Col} from 'react-bootstrap';
 
-import ContactList from './ContactList'
+import ContactList from '../containers/ContactList';
 import ContactListFilter from './ContactListFilter'
 
 let styles = {
