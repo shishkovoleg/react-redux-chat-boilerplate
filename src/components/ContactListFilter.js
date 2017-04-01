@@ -18,7 +18,7 @@ let styles = {
 	},
 	icon: {
 		fontSize: '2em',
-		color: '#c8e6c9',
+		color: '#2BBBAD',
 		marginTop: 18
 	}
 };

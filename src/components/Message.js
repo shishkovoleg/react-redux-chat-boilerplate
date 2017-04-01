@@ -4,7 +4,7 @@ import {Col} from 'react-bootstrap';
 let styles = {
 	contactName: {
 		marginTop: 10,
-		color: '#0091ea',
+		color: '#4285F4',
 		fontWeight: 600,
 		fontSize: 14,
 		marginLeft: 15
