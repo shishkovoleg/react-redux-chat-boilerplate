@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import {Col, FormControl} from 'react-bootstrap';
 
 let styles = {
@@ -23,19 +23,24 @@ let styles = {
 	}
 };
 
-class ContactListFilter extends Component {
-	render() {
-		return (
-			<Col md={12} style={styles.wrapper}>
-				<Col md={1}>
-					<i className="fa fa-search" style={styles.icon} />
-				</Col>
-				<Col md={10}>
-					<FormControl style={styles.input} placeholder="Search"/>
-				</Col>
+const ContactListFilter = ({filterContactList}) => {
+	return (
+		<Col md={12} style={styles.wrapper}>
+			<Col md={1}>
+				<i className="fa fa-search" style={styles.icon} />
 			</Col>
-		);
-	}
-}
+			<Col md={10}>
+				<FormControl
+					style={styles.input}
+					placeholder="Search"
+					onChange={e => filterContactList(e.target.value)}/>
+			</Col>
+		</Col>
+	);
+};
+
+ContactListFilter.propTypes = {
+	filterContactList: React.PropTypes.func
+};
 
 export default ContactListFilter;

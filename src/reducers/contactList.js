@@ -1,8 +1,16 @@
-import {FETCH_CONTACT_LIST, SHOW_CONTACT_SCROLLBAR, HIDE_CONTACT_SCROLLBAR} from '../actions';
+import _ from 'lodash';
+
+import {
+	FETCH_CONTACT_LIST,
+	SHOW_CONTACT_SCROLLBAR,
+	HIDE_CONTACT_SCROLLBAR,
+	FILTER_CONTACT_LIST
+} from '../actions';
 
 const initialState =  {
-	contactList: [],
-	showScrollbar: false
+	contacts: [],
+	contactsFiltered: [],
+	showScrollbar: false,
 };
 
 export default function contactListReducer(state = initialState, action) {
@@ -10,7 +18,8 @@ export default function contactListReducer(state = initialState, action) {
 		case FETCH_CONTACT_LIST:
 			return {
 				...state,
-				contactList: action.payload
+				contacts: action.payload,
+				contactsFiltered: action.payload
 			};
 
 		case SHOW_CONTACT_SCROLLBAR:
@@ -23,6 +32,15 @@ export default function contactListReducer(state = initialState, action) {
 			return {
 				...state,
 				showScrollbar: false
+			};
+
+		case FILTER_CONTACT_LIST:
+			return {
+				...state,
+				contactsFiltered: _.filter(
+					state.contacts, function(c) {
+						return _.startsWith(c.name, action.payload);
+					})
 			};
 
 		default:

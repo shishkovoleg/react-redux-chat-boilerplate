@@ -2,9 +2,11 @@ import faker from 'faker';
 import _ from 'lodash';
 import moment from 'moment';
 
+// todo move constants to separate file types.js in the same directory
 export const SHOW_CONTACT_SCROLLBAR = 'SHOW_CONTACT_SCROLLBAR';
 export const HIDE_CONTACT_SCROLLBAR = 'HIDE_CONTACT_SCROLLBAR';
 export const FETCH_CONTACT_LIST = 'FETCH_CONTACT_LIST';
+export const FILTER_CONTACT_LIST = 'FILTER_CONTACT_LIST';
 
 export function showContactScrollbar() {
 	return {
@@ -15,6 +17,13 @@ export function showContactScrollbar() {
 export function hideContactScrollbar() {
 	return {
 		type: HIDE_CONTACT_SCROLLBAR
+	}
+}
+
+export function filterContactList(query) {
+	return {
+		type: FILTER_CONTACT_LIST,
+		payload: query
 	}
 }
 
