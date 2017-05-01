@@ -2,15 +2,18 @@ import React  from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 
 let styles = {
-
+	navbar: {
+		marginBottom: 0,
+		backgroundColor: '#fff'
+	}
 };
 
 const Header = (props) => {
 	return (
-		<Navbar>
+		<Navbar style={styles.navbar}>
 			<Navbar.Header>
 				<Navbar.Brand>
-					<a href="#">React-Bootstrap</a>
+					<a href="#">Basic Chat</a>
 				</Navbar.Brand>
 			</Navbar.Header>
 			<Nav>
