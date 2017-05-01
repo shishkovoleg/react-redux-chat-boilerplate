@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import {Col, Row} from 'react-bootstrap';
 
 let styles = {
@@ -40,28 +40,34 @@ let styles = {
 	}
 };
 
-class ContactListItem extends Component {
-	render() {
-		return (
-			<Row className="list-group-item" style={styles.wrapper} key={this.props.id}>
-				<div className="media-left" style={styles.media}>
-					<img className="img-circle"
-						 src={this.props.photo}
-						 style={styles.photo}
-						 alt="" />
-				</div>
-				<div className="media-body" style={styles.media}>
-					<Col md={8} style={styles.text}>
-						<h4 style={styles.h4}>{this.props.name}</h4>
-						<span>{this.props.lastMessage}</span>
-					</Col>
-					<Col md={4} style={styles.lastTimeWrapper}>
-						<div style={styles.lastTime}>{this.props.lastTime}</div>
-					</Col>
-				</div>
-			</Row>
-		);
-	}
-}
+const ContactListItem = ({id, name, lastTime, lastMessage, photo}) => {
+	return (
+		<Row className="list-group-item" style={styles.wrapper} key={id}>
+			<div className="media-left" style={styles.media}>
+				<img className="img-circle"
+					 src={photo}
+					 style={styles.photo}
+					 alt="" />
+			</div>
+			<div className="media-body" style={styles.media}>
+				<Col md={8} style={styles.text}>
+					<h4 style={styles.h4}>{name}</h4>
+					<span>{lastMessage}</span>
+				</Col>
+				<Col md={4} style={styles.lastTimeWrapper}>
+					<div style={styles.lastTime}>{lastTime}</div>
+				</Col>
+			</div>
+		</Row>
+	);
+};
+
+ContactListItem.propTypes = {
+	id: React.PropTypes.number.isRequired,
+	name: React.PropTypes.string.isRequired,
+	photo: React.PropTypes.string.isRequired,
+	lastTime: React.PropTypes.string,
+	lastMessage: React.PropTypes.string,
+};
 
 export default ContactListItem;
